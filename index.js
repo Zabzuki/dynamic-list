@@ -6,9 +6,6 @@ let tags;
 
 function renderTags() {
   const tagUrl = url.hash.split("#tags=")[1];
-  // if (!tagUrl) {
-  //   window.alert("Link should be 'http://127.0.0.1:5501/#tags=yourtags'");
-  // }
   tags = tagUrl.split(",");
   tags = tags.filter((n) => n);
   url.hash = `tags=${tags.join()}`;
@@ -23,10 +20,14 @@ function renderTags() {
   });
 }
 
-function updateLink() {
-  console.log(textField.value);
-  if (textField) {
-    tags.push(textField.value);
+function updateLink(event) {
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+  let value = data.get("tagName");
+  console.log(value);
+  if (value) {
+    tags.push(value);
     url.hash = `tags=${tags.join()}`;
     textField.value = "";
   }
@@ -42,9 +43,12 @@ function remove(event) {
 
 window.addEventListener(
   "load",
-  () => window.location.replace("http://127.0.0.1:5501/#tags="),
+  //() => window.location.replace("http://127.0.0.1:5501/#tags="),
+  () => window.location.replace("index.html#tags="),
+
   false
 );
-// console.log(updateLink());
-renderTags();
+//renderTags();
+
+form.addEventListener("submit", updateLink);
 window.addEventListener("hashchange", renderTags, false);
