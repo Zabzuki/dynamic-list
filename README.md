@@ -1,3 +1,3 @@
 # dynamic-list
 
-![](GIF.gif)
+# ![](GIF.gif)
