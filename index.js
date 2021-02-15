@@ -43,12 +43,9 @@ function remove(event) {
 
 window.addEventListener(
   "load",
-  //() => window.location.replace("http://127.0.0.1:5501/#tags="),
   () => window.location.replace("index.html#tags="),
-
   false
 );
-//renderTags();
 
 form.addEventListener("submit", updateLink);
 window.addEventListener("hashchange", renderTags, false);
