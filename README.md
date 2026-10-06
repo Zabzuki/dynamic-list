@@ -3,7 +3,7 @@
 A small vanilla-JS app that keeps an editable list of tags entirely in the URL,
 so any list can be shared or bookmarked as a link. Responsive, no dependencies.
 
-![](output.gif)
+![Tag list demo](docs/media/dynamic-list-demo.gif)
 
 ## Features
 
