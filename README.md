@@ -33,3 +33,7 @@ on every change, so the URL is always the single source of truth.
 - JavaScript
 - HTML5
 - CSS
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file.
